@@ -20,7 +20,8 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
-    compile project(':rxnetty-http')
-    compile project(':rxnetty-spectator-tcp')
-    compile project(':rxnetty-common')
+    implementation project(':rxnetty-http')
+    implementation project(':rxnetty-tcp')
+    implementation project(':rxnetty-spectator-tcp')
+    implementation project(':rxnetty-common')
 }

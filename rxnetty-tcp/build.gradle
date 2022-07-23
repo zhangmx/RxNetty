@@ -14,8 +14,15 @@
  * limitations under the License.
  *
  */
-dependencies {
-    compile project(':rxnetty-common')
 
-    testCompile project(path: ':rxnetty-common', configuration: 'testArchives')
+plugins {
+    id "java"
+//    id "java-library"
+//    id "java-test-fixtures"
+}
+
+dependencies {
+    implementation project(':rxnetty-common')
+
+    testImplementation project(path: ':rxnetty-common', configuration: 'tests')
 }

@@ -20,8 +20,8 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
-    compile project(':rxnetty-tcp')
-    compile project(':rxnetty-common')
-    compile 'com.netflix.spectator:spectator-api:0.50.0'
-    compile 'com.netflix.numerus:numerus:1.1'
+    implementation project(':rxnetty-tcp')
+    implementation project(':rxnetty-common')
+    implementation 'com.netflix.spectator:spectator-api:0.50.0'
+    implementation 'com.netflix.numerus:numerus:1.1'
 }

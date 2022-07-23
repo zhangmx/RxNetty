@@ -14,12 +14,32 @@
  * limitations under the License.
  *
  */
+
+
 plugins {
+    id "java-library"
+    id "java-test-fixtures"
     id "com.github.hauner.jarTest" version "1.0"
 }
 
 dependencies {
-    compile "io.netty:netty-handler:${netty_version}"
-    compile "io.netty:netty-transport-native-epoll:${netty_version}", optional
-    compile "org.slf4j:slf4j-api:${slf4j_version}"
+    implementation "io.netty:netty-handler:${netty_version}"
+    implementation "io.netty:netty-transport-native-epoll:${netty_version}" // , optional
+    implementation "org.slf4j:slf4j-api:${slf4j_version}"
 }
+
+task testsJar(type: Jar, dependsOn: testClasses) {
+    classifier = 'tests'
+    from sourceSets.test.output
+}
+
+configurations {
+    tests
+}
+
+artifacts {
+    tests testsJar
+    archives testsJar
+}
+
+jar.finalizedBy(testsJar)

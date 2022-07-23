@@ -15,9 +15,9 @@
  *
  */
 dependencies {
-    compile project(':rxnetty-common')
-    compile project(':rxnetty-tcp')
-    compile "io.netty:netty-codec-http:${netty_version}"
+    implementation project(':rxnetty-common')
+    implementation project(':rxnetty-tcp')
+    implementation "io.netty:netty-codec-http:${netty_version}"
 
-    testCompile project(path: ':rxnetty-common', configuration: 'testArchives')
+    testImplementation project(path: ':rxnetty-common', configuration: 'testArchives')
 }
