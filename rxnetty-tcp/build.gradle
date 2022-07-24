@@ -16,9 +16,7 @@
  */
 
 plugins {
-    id "java"
-//    id "java-library"
-//    id "java-test-fixtures"
+    id "java-library"
 }
 
 dependencies {

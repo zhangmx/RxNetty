@@ -23,9 +23,9 @@ plugins {
 }
 
 dependencies {
-    implementation "io.netty:netty-handler:${netty_version}"
-    implementation "io.netty:netty-transport-native-epoll:${netty_version}" // , optional
-    implementation "org.slf4j:slf4j-api:${slf4j_version}"
+    api "io.netty:netty-handler:${netty_version}"
+    api "io.netty:netty-transport-native-epoll:${netty_version}" // , optional
+    api "org.slf4j:slf4j-api:${slf4j_version}"
 }
 
 task testsJar(type: Jar, dependsOn: testClasses) {

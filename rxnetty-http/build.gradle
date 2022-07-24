@@ -14,10 +14,14 @@
  * limitations under the License.
  *
  */
+plugins {
+    id "java-library"
+}
+
 dependencies {
     implementation project(':rxnetty-common')
     implementation project(':rxnetty-tcp')
-    implementation "io.netty:netty-codec-http:${netty_version}"
+    api "io.netty:netty-codec-http:${netty_version}"
 
     testImplementation project(path: ':rxnetty-common', configuration: 'testArchives')
 }

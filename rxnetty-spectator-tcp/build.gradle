@@ -15,6 +15,10 @@
  *
  */
 
+plugins {
+    id 'java-library'
+}
+
 // spectator requires java 8
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
@@ -22,6 +26,6 @@ targetCompatibility = JavaVersion.VERSION_1_8
 dependencies {
     implementation project(':rxnetty-tcp')
     implementation project(':rxnetty-common')
-    implementation 'com.netflix.spectator:spectator-api:0.50.0'
-    implementation 'com.netflix.numerus:numerus:1.1'
+    api 'com.netflix.spectator:spectator-api:0.50.0'
+    api 'com.netflix.numerus:numerus:1.1'
 }
